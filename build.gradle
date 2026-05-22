@@ -1,0 +1,33 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.springai'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:4.1.0-M4'
+    implementation 'org.springframework.ai:spring-ai-client-chat:2.0.0-M4'
+    testImplementation libs.junit
+
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+		}
+	}
+}
