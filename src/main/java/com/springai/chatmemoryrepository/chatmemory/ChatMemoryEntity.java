@@ -2,7 +2,6 @@ package com.springai.chatmemoryrepository.chatmemory;
 
 import java.time.Instant;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.ai.chat.messages.AssistantMessage;
 import org.springframework.ai.chat.messages.Message;
